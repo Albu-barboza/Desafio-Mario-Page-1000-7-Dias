@@ -1,0 +1,84 @@
+
+<!-- contato.html -->
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fale Conosco - Mario & Luigi Encanadores</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="estilocontatos.css">
+</head>
+<body>
+    <header class="header">
+        <img src="./img/logo-header.png" alt="logo mario">
+        <nav>
+            <a href="index.html">Início</a>
+            <a href="servicos.html">Nossos Serviços</a>
+            <a href="contato.html">Fale Conosco</a>
+        </nav>
+    </header>
+
+    <div class="contato-container">
+        <div class="contato-info">
+            <h1>Entre em Contato</h1>
+            
+            <div class="info-block">
+                <h3>Nosso Endereço</h3>
+                <p>Rua dos Cogumelos, 123</p>
+                <p>Reino do Cogumelo - RC</p>
+            </div>
+            
+            <div class="info-block">
+                <h3>Horário de Atendimento</h3>
+                <p>Segunda a Sexta: 8h às 18h</p>
+                <p>Sábado: 8h às 12h</p>
+            </div>
+            
+            <div class="info-block">
+                <h3>Contatos</h3>
+                <p>WhatsApp: (11) 99999-9999</p>
+                <p>Email: contato@mariobros.com</p>
+            </div>
+
+            <!-- Mapa do Google -->
+            <div class="map-container">
+                <iframe
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3656.1498!2d-46.6549!3d-23.5649!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMjPCsDM0JzA0LjQiUyA0NsKwMzknMTcuNyJX!5e0!3m2!1spt-BR!2sbr!4v1635959123456!5m2!1spt-BR!2sbr"
+                    width="100%"
+                    height="300"
+                    style="border:0;"
+                    allowfullscreen=""
+                    loading="lazy">
+                </iframe>
+            </div>
+        </div>
+
+        <form class="contato-form">
+            <div class="form-group">
+                <label for="nome">Nome</label>
+                <input type="text" id="nome" name="nome" required>
+            </div>
+            <div class="form-group">
+                <label for="telefone">Telefone</label>
+                <input type="tel" id="telefone" name="telefone" required>
+            </div>
+            <div class="form-group">
+                <label for="email">E-mail</label>
+                <input type="email" id="email" name="email" required>
+            </div>
+            <div class="form-group">
+                <label for="mensagem">Mensagem</label>
+                <textarea id="mensagem" name="mensagem" required></textarea>
+            </div>
+            <button type="submit">Enviar Mensagem</button>
+        </form>
+    </div>
+
+    <div class="caixa-video">
+        <div class="mascara"></div>
+    </div>
+
+    <script src="scripts.js"></script>
+</body>
+</html>

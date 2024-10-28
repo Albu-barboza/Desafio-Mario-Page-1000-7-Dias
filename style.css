@@ -1,0 +1,259 @@
+/* style.css - Estilos globais */
+:root {
+    --primary-color: #c51111;
+    --text-light: white;
+    --transition-default: 0.2s ease-in-out;
+    --gradient-overlay: linear-gradient(109deg, rgba(10, 12, 16, 0.99) 15%, rgba(10, 12, 16, 0.7) 50%, rgba(10, 12, 16, 0.99) 85%);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+body {
+    min-height: 100vh;
+    font-family: Arial, sans-serif;
+}
+
+/* Header */
+.header {
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+    padding: 2rem;
+    position: relative;
+    z-index: 1;
+}
+
+.header img {
+    height: 60px;
+}
+
+.header nav {
+    display: flex;
+    gap: 2rem;
+}
+
+.header a {
+    color: var(--text-light);
+    font-size: 1.5rem;
+    text-decoration: none;
+    transition: var(--transition-default);
+}
+
+.header a:hover {
+    color: var(--primary-color);
+    transform: scale(1.05);
+}
+
+/* Main Content */
+
+.caixa-principal h1 {
+    font-size: 30px; /* Altere o tamanho conforme necessário */
+    margin-bottom: 20px;
+    color: white;
+}
+
+
+.caixa-mae {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    padding: 6rem;
+    min-height: calc(100vh - 100px);
+    position: relative;
+    z-index: 1;
+}
+
+.caixa-principal {
+    width: 40%;
+}
+
+.mario-bross {
+    height: 200px;
+    margin-bottom: 2rem;
+}
+
+.mario-luigi {
+    height: 500px;
+}
+
+.caixa-principal p {
+    color: var(--text-light);
+    margin-top: 20px;
+    margin-bottom: 1.5rem;
+    font-size: 15px;
+    line-height: 1.6;
+}
+
+/* Buttons */
+button {
+    color: var(--text-light);
+    background-color: var(--primary-color);
+    border-radius: 5px;
+    border: none;
+    padding: 1rem 2rem;
+    cursor: pointer;
+    text-transform: uppercase;
+    font-weight: bold;
+    transition: var(--transition-default);
+}
+
+button:hover {
+    background-color: var(--text-light);
+    color: var(--primary-color);
+}
+
+/* Video Background */
+.caixa-video {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 0;
+}
+
+video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.mascara {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: var(--gradient-overlay);
+}
+
+/* WhatsApp Button */
+.link-whats {
+    position: fixed;
+    right: 20px;
+    bottom: 20px;
+    z-index: 2;
+    transition: var(--transition-default);
+}
+
+.link-whats:hover {
+    transform: scale(1.1);
+}
+
+.link-whats img {
+    height: 60px;
+}
+
+/* Form */
+.form-faleconosco {
+    background-color: white;
+    padding: 2rem;
+    border-radius: 10px;
+    position: fixed;
+    top: 50%;
+    left: -300px;
+    transform: translateY(-50%);
+    z-index: 4;
+    transition: left 0.5s ease-in-out;
+    width: 300px;
+}
+
+.form-group {
+    margin-bottom: 1.5rem;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 0.5rem;
+    color: #333;
+}
+
+.form-group input,
+.form-group textarea {
+    width: 100%;
+    padding: 0.5rem;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    outline: none;
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+    border-color: var(--primary-color);
+}
+
+.form-group textarea {
+    height: 100px;
+    resize: vertical;
+}
+
+.mascara-form {
+    visibility: hidden;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    z-index: 3;
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out, visibility 0.3s ease-in-out;
+}
+
+.mascara-form.visible {
+    visibility: visible;
+    opacity: 1;
+}
+
+/* Transitions */
+.transition-fade {
+    opacity: 1;
+    transition: opacity 0.3s ease-in-out;
+}
+
+.transition-fade.fade-out {
+    opacity: 0;
+}
+
+/* Responsive Design */
+@media (max-width: 1100px) {
+    .header {
+        flex-direction: column;
+        text-align: center;
+        padding: 1rem;
+    }
+
+    .header img {
+        display: none;
+    }
+
+    .header nav {
+        gap: 1rem;
+    }
+
+    .header a {
+        font-size: 1.2rem;
+    }
+
+    
+    .caixa-mae {
+        flex-direction: column;
+        padding: 2rem;
+        text-align: center;
+    }
+
+    .caixa-principal {
+        width: 100%;
+        margin-bottom: 2rem;
+    }
+
+    .mario-luigi {
+        width: 70vw;
+        height: auto;
+    }
+}
